@@ -2,3 +2,87 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    text-align: center;
+}
+
+h1{
+    color: #0b0bcc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+}
+
+h2{
+    color: #0b0bcc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+}
+
+h3{
+    color: #cecece;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+h4{
+    color: #cecece;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+}
+
+h5{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+#slides {
+    text-align: center;
+}
+
+#contate {
+    width: 200px;
+    height: 50px;
+    background-color: #0b0bcc;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+#botoes > button {
+    background-color: hsl(0, 0%, 56%, 0.5);
+    border-radius: 100%;
+    transition: background-color 0.3s ease-in-out;
+    width: 20px;
+    height: 20px;
+    border: transparent;
+    align-items: center;
+}
+
+#botoes > button:hover {
+    background-color: hsl(240, 90%, 42%, 0.5);
+}
+
+#botoes > button.selected {
+    background-color: hsla(240, 90%, 42%);
+}
+
+#projetos {
+    text-align: center;
+}
+ 
+#projetos > div {
+    display: inline-block;
+    width: 300px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+ 
+#projetos > div > img {
+    display: block;
+    margin: 10 auto;
+}

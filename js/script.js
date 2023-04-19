@@ -1,3 +1,4 @@
+//slides
 let slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
@@ -10,7 +11,7 @@ function showSlide(n) {
   setTimeout(() => {
     slides[currentSlide].classList.remove('prev');
     slides[n].classList.remove('next');
-  }, 1000);
+  }, 500);
 }
 
 function nextSlide() {
@@ -25,22 +26,7 @@ setInterval(() => {
   nextSlide();
 }, 5000);
 
-
-
-function showSlides() {
-  slideIndex++;
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[slideIndex].classList.add('active');
-  setTimeout(showSlides, 3000);
-}
-
-showSlides();
-
-
-
+//codigo para os botoes dos slides
 const botoes = document.querySelectorAll("#botoes > button");
 let botaoSelecionado = botoes[0];
 

@@ -1,42 +1,50 @@
-//slides
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+//menu
+import React, { useEffect, useState } from 'react';
+import Header from './components/Header';
 
-function showSlide(n) {
-  slides[currentSlide].classList.remove('active');
-  slides[n].classList.add('active');
-  slides[n].classList.add('next');
-  slides[currentSlide].classList.add('prev');
-  currentSlide = n;
-  setTimeout(() => {
-    slides[currentSlide].classList.remove('prev');
-    slides[n].classList.remove('next');
-  }, 500);
+
+function menu() {
+
+  const [ativaCor, setAtivaCor] = useState(false)
+
+  useEffect(function(){
+    function posicaoScroll(){
+      if(window.scrollY > 10){
+        setAtivaCor(true);
+      } else {
+        setAtivaCor(false);
+      }
+    }
+  
+    window.addEventListener('scroll', posicaoScroll);
+  }, []);
 }
 
-function nextSlide() {
-  let next = currentSlide + 1;
-  if (next >= slides.length) {
-    next = 0;
-  }
-  showSlide(next);
+/*Scroll suave*/
+
+const menuItems = document.querySelectorAll('.menu a[href^="#"]')
+
+console.log(menuItems);
+
+menuItems.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick);
+})
+
+function getScrollTopByHref(element) {
+  const id = element.getAttribute('href');
+  return document.querySelector(id).offsetTop;
 }
 
-setInterval(() => {
-  nextSlide();
-}, 5000);
+function scrollToIdOnClick(event) {
+  event.preventDefault();
+  const to = getScrollTopByHref(event.target) - 120;
+  scrollToPosition(to);
+}
 
-//codigo para os botoes dos slides
-const botoes = document.querySelectorAll("#botoes > button");
-let botaoSelecionado = botoes[0];
-
-for (let i = 0; i < botoes.length; i++) {
-  botoes[i].addEventListener("click", function () {
-    botaoSelecionado.classList.remove("selected");
-    botaoSelecionado = this;
-    botaoSelecionado.classList.add("selected");
+function scrollToPosition(to){
+  window.scroll({
+    top: to,
+    behavior: "smooth",
   });
 }
-
-
 

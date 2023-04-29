@@ -11,19 +11,18 @@
 <body>
 
   <!--Menu-->
-  <header className={ acao ? 'a' : '' }>
+  <header>
     <div class="logo">
       <img src="/img/logo.ico">
       <h3>Nitirium</h3>
     </div>
-
     <div class="menu">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#hardware">Hardware</a></li>
-        <li><a href="#firmware">Firmware</a></li>
-        <li><a href="#software">Software</a></li>
+        <li><a href="#proj">Projetos</a></li>
+        <li><a href="#b1">Hardware</a></li>
+        <li><a href="#b2">Firmware</a></li>
+        <li><a href="#b3">Software</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a href="#parceiros">Parceiros</a></li>
       </ul>
@@ -31,53 +30,46 @@
   </header>
 
   <!--Slides-->
-  <div class="slider">
-      <div class="slide-content" style="background-image: linear-gradient(rgba(72, 72, 240, 0.226), rgba(17, 17, 245, 0.336)), url('img/slide1.jpg');">
+  <div class="slider" style="background-image: linear-gradient(rgba(0, 0, 0, 0.274), rgba(2, 2, 14, 0.676)), url('img/slide1.jpg');">
+      <div class="slide-content">
         <h1>Nitirium</h1>
-        <h3>Soluções em Projetos Eletrônicos</h3>
-        <br>
+        <h3>Soluções em Projetos Eletrônicos</h3><br>
         <button id="contate"><a href="#contato">Contate-nos</a></button>
       </div>
   </div>
 
-<!--Projetos-->  
-    
-    <div id="projetos">
-      <div style="height: 40px;">
-        <br>
-      </div>
-      <h2>Projetos</h2>
-        <div id="proj 1">
-            <img src="img/projeto1.png" alt="Medidor de Temperatura" width="300">
-            <h5>Medidor de Temperatura</h5>
-            <p>Medidor de temperatura para Microondas. Pode-se salvar até cinco patamares por programa.E até 10 programas de controle de temperatura.</p>
-        </div>
-        <div id="proj 2">
-            <img src="img/projeto3.png" alt="Medidor de Nível" height="300">
-            <h5>Medidor de Nível</h5>
-            <p>Medidor de Nível com ARM é capaz de medir o nível, armazenar a informação e transmiti-la por RS485, GPRS, WIFI ou por GPRS.</p>
-        </div>
-        <div id="proj 3">
-            <img src="img/projeto2.jpg" alt="Data Logger para Freezers" width="300">
-            <h5>Data Logger para Freezers</h5>
-            <p>Log da temperatura, rede elétrica, status da porta do freezer. Comunicação por Bluetooth, GPRS, USB ou Wifi.</p>
-        </div>
-      <div style="height: 40px;">
-        <br>
-      </div>
+  <!--Projetos-->  
+  <div id="proj" class="container">
+    <h3>Projetos</h3>
+    <div class="Projetos">
+        <h5>Medidor de Nível</h5>
+        <img src="img/Medidor-Nivel.png">
+        <button class="btn">Saiba mais</button>
     </div>
+    <div class="Projetos">
+        <h5>Data Logger</h5>
+        <img src="img/Data-Logger.jpg">
+        <button class="btn">Saiba mais</button>
+    </div>
+    <div class="Projetos">
+        <h5>Termometro</h5>
+        <img src="img/Termometro.png">
+        <button class="btn">Saiba mais</button>
+    </div>
+  </div>
+  
     <div id="banners">
-      <div id="hardware" style="background-image: linear-gradient(to right, rgba(13, 13, 156, 0.589), rgba(9, 9, 141, 0.541)), url('img/banenr1.jpg');">
+      <div id="b1" class="banner" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.692)), url('img/banenr1.jpg');">
           <div id="hardware-content">
-              <h4>Hardware</h4>
+              <h4>Hardware</h4><br>
               <p>Desde a criação de uma nova placa, mudança para uma nova versão, transformação de PTH  em SMD até atualizações tecnológicas visando remodelar o produto para os dias atuais. Roteamento de placas em BGA ou FBGA e com múltiplas camadas.</p><br>
               <p>A Nitirium  possui parceiros que podem rodar o seu lote piloto sem o custo exorbitante que algumas empresas cobram por pequenos lotes, toda a gestão de material poderá ser realizada por nós.</p>
           </div>
       </div>
       <br>
-      <div id="firmware" style="background-image: linear-gradient(to right, rgba(32, 32, 241, 0.692), rgba(17, 17, 250, 0.336)), url('img/banner2.jpg');">
+      <div id="b2" class="banner" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.719), rgba(0, 0, 0, 0.5)), url('img/banner2.jpg');">
           <div id="firmware-content">
-              <h4>Firmware</h4>
+              <h4>Firmware</h4><br>
               <p>Há alguns anos existiam "apenas" microcontroladores e PC´s. Eram mundos semelhantes, entretanto, tratados como se fossem totalmente diferentes, onde raramente se cruzavam, eram complemento um do outro. Hoje a realidade é outra. Existem diversos dispositivos, desde microcontroladores de 8, 16 e 32 bits, DSP´s, à módulos programados em JAVA (EGS5i e G24), FPGA´s, modens com script´s, microcontroladores com velocidades de PC´s e placas com arquitetura de PC´s que realizam trabalhos antes destinados a  microcontroladores.</p><br>
             
               <p>Toda esta diversidade nem sempre significa redução de custos, por isso estamos preparados para dizer qual é a melhor solução para o seu projeto, e nos capacitando sempre para estarmos antecipados ao próximo passo tecnológico e oferecer a melhor solução.</p><br>
@@ -96,12 +88,12 @@
           </div>
       </div>
       <br>
-      <div id="software" style="background-image: linear-gradient(to right, rgba(5, 5, 173, 0.849), rgba(17, 17, 250, 0.349)), url('img/banner3.jpg');">
+      <div id="b3" class="banner" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.5)), url('img/banner3.jpg');">
           <div id="software-content">
-              <h4>Software</h4>
-              <p>Os programas de computadores gerenciam toda a nossa vida, do acesso a conta bancaria, aos video games, estamos sempre dependendo deles para nosso conforto, auxiliar em diagnosticos e manter a vida com os aparelhos hospitalares. A Nitirium desenvolve softwares para testes de dispositivos, softwares em linux para sistemas embarcados e banco de dados para controle da informação.</p>
+              <h4>Software</h4><br>
+              <p>Os programas de computadores gerenciam toda a nossa vida, do acesso a conta bancaria, aos video games, estamos sempre dependendo deles para nosso conforto, auxiliar em diagnosticos e manter a vida com os aparelhos hospitalares. A Nitirium desenvolve softwares para testes de dispositivos, softwares em linux para sistemas embarcados e banco de dados para controle da informação.</p><br>
 
-              <p>Desenvolvemos softwares para Windows e Linux nas seguintes linguagens de programação :</p>
+              <p>Desenvolvemos softwares para Windows e Linux nas seguintes linguagens de programação :</p><br>
               
               <p>C</p>
               <p>C++</p>
@@ -115,7 +107,6 @@
       <h2>Contato</h2>
       <div id="contato">
         <h3>Email: comercial@nitirium.com.br</h3>
-        <h3>Telefone: 11-2614-1429</h3>
       </div>
 
     <br>
@@ -129,8 +120,9 @@
         <img src="img/pat6.jpg" width="100" height="100">
     </div>
     <br>
-    <div id="footer"></div>
-    <script src="js/script.js"></script>
-
+    <div id="footer">
+      
+    </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
